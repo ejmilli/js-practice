@@ -1,10 +1,9 @@
-const random = (num) => {
-  const intnum = Math.floor(Math.random() * num) + 1;
-  if (intnum === num) {
-    return "GoodWork";
-  } else {
-    return "mismatched";
-  }
-};
+let beprompt = prompt("Guess a number between 1 and 10");
 
-console.log(random(10));
+let randomNum = Math.floor(Math.random() * 10) + 1;
+
+if (beprompt === randomNum) {
+  console.log("GoodWork");
+} else {
+  console.log("Mismatched, the number was " + randomNum);
+}
