@@ -3,9 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Calculator</title>
   </head>
   <body>
-    <script src="random-int.js"></script>
+    <form>
+      <label for="firstNumber">First Number</label>
+      <input type="text" id="firstNumber" />
+
+      <label for="secondNumber">Second Number</label>
+      <input type="text" id="secondNumber" />
+
+      <button type="button" onclick="multiplyBy()">Multiply</button>
+      <button type="button" onclick="divideBy()">Divide</button>
+    </form>
+
+    <p>
+      The Result is : <br />
+      <span id="result"></span>
+    </p>
+
+    <script src="multndiv.js"></script>
   </body>
 </html>
