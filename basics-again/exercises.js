@@ -742,22 +742,400 @@ switch (grade) {
 // //   }
 // // });
 
-const ul = document.getElementById("myList");
-const btn = document.getElementById("btn");
+// const ul = document.getElementById("myList");
+// const btn = document.getElementById("btn");
 
-// Add new li on button click
-btn.addEventListener("click", () => {
-  const fruit = prompt("Enter a fruit name:");
-  if (!fruit) return;
+// // Add new li on button click
+// btn.addEventListener("click", () => {
+//   const fruit = prompt("Enter a fruit name:");
+//   if (!fruit) return;
 
-  const li = document.createElement("li");
-  li.innerText = fruit;
-  ul.appendChild(li);
-});
+//   const li = document.createElement("li");
+//   li.innerText = fruit;
+//   ul.appendChild(li);
+// });
 
-// Event delegation on ul
-ul.addEventListener("click", (event) => {
-  if (event.target.tagName === "LI") {
-    alert(`You clicked: ${event.target.innerText}`);
+// // Event delegation on ul
+// ul.addEventListener("click", (event) => {
+//   if (event.target.tagName === "LI") {
+//     alert(`You clicked: ${event.target.innerText}`);
+//   }
+// });
+
+
+// const text = document.getElementById("text");
+// const ul = document.getElementById("myList");
+// const btn = document.getElementById("btn");
+// const remove = document.getElementById("remove");
+// const count = document.getElementById("count")
+
+// let lastId; 
+// let currentID = 1
+
+// btn.addEventListener("click" , () => {
+  
+//   const value = text.value.trim()
+ 
+//   if (!value) return 
+
+//   const li = document.createElement("li")
+//   li.innerText = value;
+//   li.id = String(currentID)
+//   lastId = currentID
+//   count.innerHTML = `Count: ${currentID}`
+//   currentID++
+  
+
+   
+
+
+//    ul.appendChild(li)
+
+//   text.value = ""
+
+// })
+
+// remove.addEventListener("click" , () => {
+  
+//   const lastChild = document.getElementById(String(lastId))
+//   lastChild.remove()
+//   currentID--
+   
+//   count.innerHTML = `Count: ${currentID}`
+// })
+
+// const ul = document.createElement("ul");
+
+
+// ul.classList.add("hehe")
+// document.body.appendChild(ul)
+// ul.removeAttribute("class")
+
+// const ul = document.getElementById("myList");
+// ul.addEventListener("click", (e) => {
+//   if (e.target.tagName === "LI") {
+//     const newText = prompt("Edit this item:", e.target.innerText);
+//     if (newText !== null && newText.trim() !== "") {
+//       e.target.innerText = newText.trim();
+//     }
+//   }
+// });
+
+
+// console.log("Start");
+
+// setTimeout(() => {
+//   console.log("This runs after 2 seconds");
+// }, 2000);
+
+// console.log("End");
+
+// function delayedGreeting(callback) {
+//   setTimeout(() => {
+//     callback("Hello from callback!");
+//   }, 1000);
+// }
+
+// // Usage:
+// delayedGreeting((message) => {
+//   console.log(message);
+// });
+
+// const myPromise = new Promise((resolve, reject) => {
+//   const success = true; // try changing this to false
+
+//   setTimeout(() => {
+//     if (success) {
+//       resolve("Promise resolved!");
+//     } else {
+//       reject("Promise rejected!");
+//     }
+//   }, 1000);
+// });
+
+// myPromise
+//   .then((msg) => console.log(msg))
+//   .catch((err) => console.error(err))
+//   .finally(() => console.log("Promise settled"));
+
+// const isEven = (num) => {
+//     return new Promise((reolve, reject)  => {
+       
+//        setTimeout(() => {
+//         if (num % 2 === 0 ) {
+//           resolve()
+//         } else {
+//  reject()
+//         }
+//        }, 2000)
+//     })
+// }
+
+// isEven(4) 
+// .then(() => {})
+// .catch(() => {})
+
+
+  // for (let i = 1; i <= 20; i++) {
+  //   console.log(i)
+  // }
+
+  // const facNum = (num) => {
+  //   let result = 1
+  //   for (let i = 1; i <= num; i++) {
+  //     result *= i
+  //   }
+  //   return result
+  // }
+
+  // console.log(facNum(5))
+
+// const numbers = [1, 2, 3, 4, 5, 6];
+
+
+// const result =  numbers.filter((num) => num % 2 === 0).map((num) => num * num)
+
+// console.log(result)
+
+
+// const swapped = (obj) => {
+
+//    let newObj = {} 
+   
+//    for (const [key, value] of Object.entries(obj)) {
+//       newObj[value] = key
+//    }
+
+//    return newObj
+
+// }
+
+
+// const obj = { a: 1, b: 2, c: 3 };
+// console.log(swapped(obj))
+
+
+// const arrayOfStrinsg = (arr) => {
+  
+//   let result = [] 
+
+//   for (const r of arr) {
+//     if (r.length > 5) {
+//       result.push(r)
+//     }
+//   }
+//    return result
+// }
+
+// console.log(arrayOfStrinsg(["milli", "apple", "seven" , "fewgerwergew", "fewgergregre" ]))
+
+
+// const sumOfsquares = (arr) => {
+
+//   const result = arr.map((r) => r ** 2 )
+//   return result
+// }
+
+// console.log(sumOfsquares([2, 4, 6]));
+
+//  const facNum = (num) => {
+//     if (num < 0 ) return 0
+
+//     let result = 1
+//     for (let i = 1; i <= num; i++) {
+//       result *= i
+//     }
+//     return result
+//   }
+
+//   console.log(facNum(5))
+
+
+//   const sqOfOddNumbers = (arr) => {
+//     const result = arr.filter((r) => !(r % 2 === 0 )).map((r) => r ** 2)
+//     return result   
+//   }
+
+
+//   console.log(sqOfOddNumbers([3, 5, 7]))
+
+// function mergeObjects(obj1, obj2) {
+//   let newObj = {}
+
+//    for (const key in obj1) {
+//     newObj[key] = obj1[key]
+//    }
+
+//    for (const key in obj2)  {
+//      newObj[key] = obj2[key]
+//    }
+
+//    return newObj
+// }
+
+// const obj1 = {
+  
+//   "a" :  1 ,
+//   "b" : "alice",
+//     "c" : "house"
+// }
+// const obj2 = {
+  
+//   "a" :  4 ,
+//   "b" : "alice",
+//     "c" : "key"
+// }
+
+// console.log(mergeObjects(obj1, obj2))
+
+
+// // function reverseString(str) {
+// //     let str1 = "" 
+// //     for (let i = str.length-1; i >= 0; i--) {
+// //        str1 += str[i]
+// //     }
+
+// //     return str1
+// // }
+
+// // console.log(reverseString("hello"))
+
+// const reverseString = (str) => {
+  
+//   let result = str.split("").reverse().join("")
+//   return result
+// }
+
+// console.log(reverseString("hello"))
+
+
+// function myFilter(arr, callback) {
+//   let newArr = [];
+
+//   for (const r of arr) {
+//     if (callback(r)) {
+//       newArr.push(r);
+//     }
+//   }
+
+//   return newArr;
+// }
+// function maxNumber(arr) {
+//   if (arr.length === 0) return undefined; 
+
+//   let max = arr[0];  
+//   for (const r of arr) {
+//     if (r > max) {
+//       max = r; 
+//     }
+//   }
+
+//   return max;
+// }
+
+// console.log(maxNumber([3, 7, 2, 9, 4])); 
+
+
+// function myMap(arr, callback) {
+//   let newArr = []
+
+//   for (const r of arr) {
+//     newArr.push(callback(r))
+//   }
+
+//   return newArr
+// }
+
+
+// const isPrime = (num) => {
+  
+//   if (num <= 1 ) return false 
+
+//   for (let i = 2; i <= num*num ; i++) {
+//     if (num % i === 0) return false
+//   }
+//   return true 
+
+// }
+
+
+// const isPalindrome = (str) => {
+  
+//   let result = str.split("").reverse().join("")
+//   return str === result
+   
+// }
+
+
+// const isPalindrome = (str) => {
+//   let reversed = "" 
+  
+//   for (let i = str.length -1; i >= 0; i--) {
+//     reversed += str[i] 
+    
+//   }
+  
+//   return str === reversed
+  
+// }
+// console.log(isPalindrome("hello"));
+// console.log(isPalindrome("racecar"));
+
+
+// const arrayDuplicate = (arr) => {
+ 
+//  let newArr = [] 
+//  let seen = [] 
+//  for (const r of arr) {
+//   if (seen.includes(r)) {
+//     if (!newArr.includes(r)) {
+//       newArr.push(r)
+//     }
+//   } else {
+//     seen.push(r)
+//   }
+//  }
+
+
+//  return newArr
+
+// }
+
+// console.log(arrayDuplicate([1, 2, 2, 3, 4, 4, 4, 5]));
+
+
+// const capitalizeWords = (str) => {
+//   const result = str.split(" ")
+//    const capitalize = [] 
+
+//    for (const r of result) {
+     
+//      capitalize.push(r[0].toUpperCase() + r.slice(1))
+//    }
+
+//    return capitalize.join(" ")
+   
+   
+// }
+
+//  console.log(capitalizeWords("hello world from chatgpt"));
+
+
+const giveCount = (str) => {
+   
+  const result = str.split("")
+  let obj = {}
+  
+  
+  for (const r of result) {
+    if (obj[r]) {
+      obj[r] += 1
+    } else {
+      obj[r] = 1
+    }
   }
-});
+return obj
+  
+}
+
+console.log(giveCount("hello"));
